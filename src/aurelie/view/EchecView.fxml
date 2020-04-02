@@ -101,7 +101,6 @@
                   <Region prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="5" GridPane.rowIndex="7" />
                   <Region prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #CBC8C9;" GridPane.columnIndex="6" GridPane.rowIndex="7" />
                   <Region prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="7" GridPane.rowIndex="7" />
-
                </children>
             </GridPane>
             <Label layoutX="484.0" layoutY="38.0" text="Mon jeu d'échec">
