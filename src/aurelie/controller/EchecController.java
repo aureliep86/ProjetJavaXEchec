@@ -2,6 +2,7 @@ package aurelie.controller;
 
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.geometry.Pos;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.GridPane;
@@ -14,39 +15,41 @@ public class EchecController implements Initializable {
     @FXML
     private GridPane gridPane;
 
+    // déclaration des pions
+    ImageView cavalierBlanc = new ImageView(new Image("images/CB.gif"));
+    ImageView cavalierNoir = new ImageView(new Image("images/CN.gif"));
+    ImageView cavalierBlanc1 = new ImageView(new Image("images/CB.gif"));
+    ImageView cavalierNoir1 = new ImageView(new Image("images/CN.gif"));
+    ImageView dameBlanche = new ImageView(new Image("images/DB.gif"));
+    ImageView dameNoire = new ImageView(new Image("images/DN.gif"));
+    ImageView fouBlanc = new ImageView(new Image("images/FB.gif"));
+    ImageView fouNoir = new ImageView(new Image("images/FN.gif"));
+    ImageView fouBlanc1 = new ImageView(new Image("images/FB.gif"));
+    ImageView fouNoir1 = new ImageView(new Image("images/FN.gif"));
+    ImageView pionBlanc = new ImageView(new Image("images/PB.gif"));
+    ImageView pionBlanc1 = new ImageView(new Image("images/PB.gif"));
+    ImageView pionBlanc2 = new ImageView(new Image("images/PB.gif"));
+    ImageView pionBlanc3 = new ImageView(new Image("images/PB.gif"));
+    ImageView pionBlanc4 = new ImageView(new Image("images/PB.gif"));
+    ImageView pionBlanc5 = new ImageView(new Image("images/PB.gif"));
+    ImageView pionBlanc6 = new ImageView(new Image("images/PB.gif"));
+    ImageView pionBlanc7 = new ImageView(new Image("images/PB.gif"));
+    ImageView pionNoir = new ImageView(new Image("images/PN.gif"));
+    ImageView pionNoir1 = new ImageView(new Image("images/PN.gif"));
+    ImageView pionNoir2 = new ImageView(new Image("images/PN.gif"));
+    ImageView pionNoir3 = new ImageView(new Image("images/PN.gif"));
+    ImageView pionNoir4 = new ImageView(new Image("images/PN.gif"));
+    ImageView pionNoir5 = new ImageView(new Image("images/PN.gif"));
+    ImageView pionNoir6 = new ImageView(new Image("images/PN.gif"));
+    ImageView pionNoir7 = new ImageView(new Image("images/PN.gif"));
+    ImageView roiBlanc = new ImageView(new Image("images/RB.gif"));
+    ImageView roiNoir = new ImageView(new Image("images/RN.gif"));
+    ImageView tourBlanche = new ImageView(new Image("images/TB.gif"));
+    ImageView tourNoire = new ImageView(new Image("images/TN.gif"));
+    ImageView tourBlanche1 = new ImageView(new Image("images/TB.gif"));
+    ImageView tourNoire1 = new ImageView(new Image("images/TN.gif"));
+
     public void installationDesPions() {
-        ImageView cavalierBlanc = new ImageView(new Image("images/CB.gif"));
-        ImageView cavalierNoir = new ImageView(new Image("images/CN.gif"));
-        ImageView cavalierBlanc1 = new ImageView(new Image("images/CB.gif"));
-        ImageView cavalierNoir1 = new ImageView(new Image("images/CN.gif"));
-        ImageView dameBlanche = new ImageView(new Image("images/DB.gif"));
-        ImageView dameNoire = new ImageView(new Image("images/DN.gif"));
-        ImageView fouBlanc = new ImageView(new Image("images/FB.gif"));
-        ImageView fouNoir = new ImageView(new Image("images/FN.gif"));
-        ImageView fouBlanc1 = new ImageView(new Image("images/FB.gif"));
-        ImageView fouNoir1 = new ImageView(new Image("images/FN.gif"));
-        ImageView pionBlanc = new ImageView(new Image("images/PB.gif"));
-        ImageView pionBlanc1 = new ImageView(new Image("images/PB.gif"));
-        ImageView pionBlanc2 = new ImageView(new Image("images/PB.gif"));
-        ImageView pionBlanc3 = new ImageView(new Image("images/PB.gif"));
-        ImageView pionBlanc4 = new ImageView(new Image("images/PB.gif"));
-        ImageView pionBlanc5 = new ImageView(new Image("images/PB.gif"));
-        ImageView pionBlanc6 = new ImageView(new Image("images/PB.gif"));
-        ImageView pionBlanc7 = new ImageView(new Image("images/PB.gif"));
-        ImageView pionNoir = new ImageView(new Image("images/PN.gif"));
-        ImageView pionNoir1 = new ImageView(new Image("images/PN.gif"));
-        ImageView pionNoir2 = new ImageView(new Image("images/PN.gif"));
-        ImageView pionNoir3 = new ImageView(new Image("images/PN.gif"));
-        ImageView pionNoir4 = new ImageView(new Image("images/PN.gif"));
-        ImageView pionNoir5 = new ImageView(new Image("images/PN.gif"));
-        ImageView pionNoir6 = new ImageView(new Image("images/PN.gif"));
-        ImageView pionNoir7 = new ImageView(new Image("images/PN.gif"));
-        ImageView roiBlanc = new ImageView(new Image("images/RB.gif"));
-        ImageView roiNoir = new ImageView(new Image("images/RN.gif"));
-        ImageView tourBlanche = new ImageView(new Image("images/TB.gif"));
-        ImageView tourNoire = new ImageView(new Image("images/TN.gif"));
-        ImageView tourBlanche1 = new ImageView(new Image("images/TB.gif"));
-        ImageView tourNoire1 = new ImageView(new Image("images/TN.gif"));
 
         gridPane.add(tourNoire, 0, 0);
         gridPane.add(cavalierNoir, 1, 0);
@@ -83,10 +86,20 @@ public class EchecController implements Initializable {
         gridPane.add(fouBlanc1, 5, 7);
         gridPane.add(cavalierBlanc1, 6, 7);
         gridPane.add(tourBlanche1, 7, 7);
+
+    }
+
+    public void mouvementDesPions() {
+        gridPane.setOnMouseClicked(value -> {
+            System.out.println();
+        });
     }
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+
         installationDesPions();
+        mouvementDesPions();
+
     }
 }
